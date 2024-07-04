@@ -18,7 +18,7 @@ pipeline{
         }
         stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "sbera717/java:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "sbera717/sb:${BUILD_NUMBER}"
         REGISTRY_CREDENTIALS = credentials('docker-login')
       }
       steps {

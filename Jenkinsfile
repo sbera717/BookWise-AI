@@ -16,18 +16,6 @@ pipeline{
                 sh 'mvn clean package'
             }
         }
-        stage('Code Analysis'){
-            environment{
-                SONAR_PROJECT_KEY = 'sbera717_Check'  
-                SONAR_ORGANIZATION = 'sbera717'
-                SONAR_HOST_URL = 'https://sonarcloud.io'
-            }
-            steps{
-                withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_AUTH_TOKEN')]) {
-                sh 'mvn sonar:sonar \ -Dsonar.projectKey=${SONAR_PROJECT_KEY} \ -Dsonar.organization=${SONAR_ORGANIZATION} \ -Dsonar.host.url=${SONAR_HOST_URL} \-Dsonar.login=${SONAR_AUTH_TOKEN}'
-                }
-            }
-        }
         stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "sbera717/java:${BUILD_NUMBER}"

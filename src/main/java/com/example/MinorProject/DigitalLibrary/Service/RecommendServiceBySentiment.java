@@ -51,7 +51,7 @@ public class RecommendServiceBySentiment {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.set("Content-Type", "application/json");
         HttpEntity httpEntity = new HttpEntity<>(payload,httpHeaders);
-        String url = "http://20.64.235.142:8000/user";
+        String url = "http://:8000/user";
         ResponseEntity<Map> response = restTemplate.exchange(
                 url,
                 HttpMethod.POST,

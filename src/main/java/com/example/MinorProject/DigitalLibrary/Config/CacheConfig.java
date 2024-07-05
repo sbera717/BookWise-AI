@@ -15,7 +15,7 @@ public class CacheConfig {
     public LettuceConnectionFactory getConnectionFactory(){
 
        RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration("redis-16826.c1.us-west-2-2.ec2.redns.redis-cloud.com",16826);
-       configuration.setPassword("6s4mvq1uMTikAUdHv1QwV6AefgbPmcLj");
+       configuration.setPassword("");
         LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory(configuration);
         return lettuceConnectionFactory;
     }

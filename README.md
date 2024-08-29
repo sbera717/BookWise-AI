@@ -56,3 +56,6 @@ Run **java -jar "name-of-the-jar-file"**.
 Ensure that SQL Server and Redis are installed. You can also use MySQL by modifying the details in the **application.properties** file.
 
 **Note**: To use AI functionality, refer to the FastAPI README file. The other application should run concurrently with this one as it provides necessary data for functionality. 
+
+![5 july drawio](https://github.com/user-attachments/assets/946989ed-b524-4968-9f9a-f3d75aa78875)
+

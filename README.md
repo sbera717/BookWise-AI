@@ -53,7 +53,7 @@ The JAR file will be generated in the target folder.
 
 Run **java -jar "name-of-the-jar-file"**.
 
-Ensure that SQL Server and Redis are installed. You can also use MySQL by modifying the details in the **application.properties** file.
+Ensure that SQL and Redis are installed.
 
 **Note**: To use AI functionality, refer to the FastAPI README file. The other application should run concurrently with this one as it provides necessary data for functionality. 
 
